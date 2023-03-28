@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# TypeScript build output
+dist/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.log.*
+*.tmp
+*.tmp.*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Test db
+testdb.json
