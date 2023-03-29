@@ -20,8 +20,10 @@ npm install gptdb
 ### Usage
 
 ```javascript
+import { GPTDB } from 'gptdb';
+
 (async () => {
-  const db = new GPTDB('mydb.json', { value: 'test', something: { name: 'chat', more: { deep: 'value' } }, bookings: [] });
+  const db = GPTDB('mydb.json', { value: 'test', something: { name: 'chat', more: { deep: 'value' } }, bookings: [] });
   await db.read();
   console.log(db.get('something.name'));
   db.data.places = [];
