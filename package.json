@@ -27,6 +27,11 @@
     "typescript": "^5.0.2"
   },
   "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "./configs/tsconfig.base.json"
+      }
+    },
     "testEnvironment": "node",
     "transform": {
       "^.+\\.ts$": "ts-jest"
