@@ -1,17 +1,10 @@
 import fs from 'fs';
 import util from 'util';
 import { createProxy } from './utils';
+import type { Watcher, WatcherCallback } from './types';
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
-
-type WatcherCallback = (oldValue: any, newValue: any) => void;
-
-type Watcher = {
-  path: string;
-  callback: WatcherCallback;
-  remove: () => void;
-};
 
 export const GPTDB = (filePath: string, initialData: object = {}) => {
   const watchers: Watcher[] = [];
